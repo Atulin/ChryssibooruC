@@ -1,0 +1,105 @@
+mainCol = #242424
+darkCol = darken(mainCol, 10%)
+lightCol = lighten(mainCol, 10%)
+maneCol = #0F546C
+maneDarkCol = darken(maneCol, 10%)
+maneLightCol = lighten(maneCol, 10%)
+lighten = #FFFFFF11
+lighten2 = #FFFFFF22
+darken = #00000011
+magicCol = #10DC0D
+textCol = white
+
+
+/****************************************************\
+|*                   MAIN STYLE                     *|
+\****************************************************/
+html, body
+  background mainCol
+  color textCol
+  width 100%
+  height 100%
+  margin 0
+
+// Content
+.content
+  display flex
+  flex-wrap wrap
+  margin auto
+  margin-top 2vw
+  margin-bottom 52px
+
+// Image
+.image-container
+  width 50vw
+  height 50vw
+  text-align center
+
+.image
+  width 50vw - 2px
+  height 50vw - 2px
+  object-fit cover
+
+// Navigation
+.navigation
+  height 50px
+  width 100%
+  bottom 0
+  left 0
+  right 0
+  margin 0
+  position fixed
+  display flex
+  background maneCol
+
+  & > .button
+    width 50px
+    background transparent
+    border none
+    color textCol
+
+    &:active
+      background lighten
+
+    &:focus
+      outline none
+
+// Input divs
+div.input
+  width 100%
+  height 30px
+  margin 5px
+  padding 5px
+  border-radius 5px
+  border-color maneDarkCol
+  border-width 2px
+  background lighten
+  color textCol
+  display flex
+  vertical-align center
+  horiz-align center
+
+  &:focus-within
+    background lighten2
+
+// Search bar
+input.search
+  height 100%
+  width 100%
+  margin auto
+  font-size 1em
+  background transparent
+  border none
+  color textCol
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  &:focus
+    outline none
+
+// Icon
+.icon
+  margin-left 5px
+  margin-right 8px
+  margin-top auto
+  margin-bottom auto

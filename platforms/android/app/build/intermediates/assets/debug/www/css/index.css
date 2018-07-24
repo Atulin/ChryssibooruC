@@ -1,0 +1,87 @@
+/****************************************************|*                   MAIN STYLE                     *|
+\****************************************************/
+html,
+body {
+  background: #242424;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-top: 2vw;
+  margin-bottom: 52px;
+}
+.image-container {
+  width: 50vw;
+  height: 50vw;
+  text-align: center;
+}
+.image {
+  width: 48vw;
+  height: 48vw;
+  object-fit: cover;
+}
+.navigation {
+  height: 50px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  position: fixed;
+  display: flex;
+  background: #0f546c;
+}
+.navigation > .button {
+  width: 50px;
+  background: transparent;
+  border: none;
+  color: #fff;
+}
+.navigation > .button:active {
+  background: rgba(255,255,255,0.067);
+}
+.navigation > .button:focus {
+  outline: none;
+}
+div.input {
+  width: 100%;
+  height: 30px;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  border-color: #0e4c61;
+  border-width: 2px;
+  background: rgba(255,255,255,0.067);
+  color: #fff;
+  display: flex;
+  vertical-align: center;
+  horiz-align: center;
+}
+div.input:focus-within {
+  background: rgba(255,255,255,0.133);
+}
+input.search {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  font-size: 1em;
+  background: transparent;
+  border: none;
+  color: #fff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+input.search:focus {
+  outline: none;
+}
+.icon {
+  margin-left: 5px;
+  margin-right: 8px;
+  margin-top: auto;
+  margin-bottom: auto;
+}

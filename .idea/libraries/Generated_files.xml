@@ -1,0 +1,31 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/www/fontawesome/js/all.min.js" />
+        <item url="file://$PROJECT_DIR$/www/fontawesome/js/brands.min.js" />
+        <item url="file://$PROJECT_DIR$/www/fontawesome/js/brands.min.min.js" />
+        <item url="file://$PROJECT_DIR$/www/fontawesome/js/fontawesome.min.js" />
+        <item url="file://$PROJECT_DIR$/www/fontawesome/js/regular.min.js" />
+        <item url="file://$PROJECT_DIR$/www/fontawesome/js/regular.min.min.js" />
+        <item url="file://$PROJECT_DIR$/www/fontawesome/js/solid.min.js" />
+        <item url="file://$PROJECT_DIR$/www/fontawesome/js/solid.min.min.js" />
+        <item url="file://$PROJECT_DIR$/www/fontawesome/js/v4-shims.min.js" />
+        <item url="file://$PROJECT_DIR$/www/fontawesome/js/v4-shims.min.min.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/www/fontawesome/js/all.min.js" />
+      <root url="file://$PROJECT_DIR$/www/fontawesome/js/brands.min.js" />
+      <root url="file://$PROJECT_DIR$/www/fontawesome/js/brands.min.min.js" />
+      <root url="file://$PROJECT_DIR$/www/fontawesome/js/fontawesome.min.js" />
+      <root url="file://$PROJECT_DIR$/www/fontawesome/js/regular.min.js" />
+      <root url="file://$PROJECT_DIR$/www/fontawesome/js/regular.min.min.js" />
+      <root url="file://$PROJECT_DIR$/www/fontawesome/js/solid.min.js" />
+      <root url="file://$PROJECT_DIR$/www/fontawesome/js/solid.min.min.js" />
+      <root url="file://$PROJECT_DIR$/www/fontawesome/js/v4-shims.min.js" />
+      <root url="file://$PROJECT_DIR$/www/fontawesome/js/v4-shims.min.min.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>
