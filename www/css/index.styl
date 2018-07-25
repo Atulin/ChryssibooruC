@@ -43,9 +43,15 @@ html, body
     -webkit-animation Pulse 3s infinite ease-in-out
 
     @-webkit-keyframes Pulse {
-      0%   { -webkit-filter: drop-shadow(0 0 5px  magicCol) }
-      50%  { -webkit-filter: drop-shadow(0 0 20px magicCol) }
-      100% { -webkit-filter: drop-shadow(0 0 5px  magicCol) }
+      0% {
+        -webkit-filter: drop-shadow(0 0 5px  magicCol)
+      }
+      50% {
+        -webkit-filter: drop-shadow(0 0 20px magicCol)
+      }
+      100% {
+        -webkit-filter: drop-shadow(0 0 5px  magicCol)
+      }
     }
 
 // Image
@@ -59,6 +65,13 @@ html, body
   width 50vw - 2px
   height 50vw - 2px
   object-fit cover
+  -webkit-animation Load 0.5s infinite ease-in-out
+
+  @-webkit-keyframes Load {
+    0%   { background:  transparent; }
+    50%  { background: lighten; }
+    100% { background:  transparent; }
+  }
 
 // Navigation
 .navigation
@@ -124,3 +137,60 @@ button.search
   border-radius 50%
   border none
   color textCol
+
+// Fullscreen
+.fullscreen
+  visibility collapse
+  display none
+
+  &.enabled
+    visibility visible
+    display block
+    position fixed
+    left 0
+    top 0
+    width 100%
+    height 100%
+    margin 0
+    padding 0
+    background mainCol
+    z-index 900
+
+  & > #fullscreenImg
+    position absolute
+    text-align center
+    left 0
+    top 0
+    width 100%
+    height 100%
+    margin 0
+    margin-bottom 50px
+    padding 0
+    z-index 1000
+
+    & > .full-image
+      width 100%
+      height auto
+      margin-top auto
+      margin-bottom auto
+      object-position 50% 50%
+      object-fit contain
+
+  & > .navigation
+    z-index 1100
+
+// Sidebar
+.sidebar
+  position absolute
+  left 0
+  top 0
+  width 100%
+  height 100%
+  background lightCol
+  display none
+  visibility collapse
+  z-index 1200
+
+  &.enabled
+    display block
+    visibility visible

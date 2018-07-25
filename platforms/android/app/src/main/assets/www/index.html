@@ -15,12 +15,14 @@
     </head>
     <body>
 
+        <!-- MAIN CONTENT -->
         <div class="content">
             <div class="bg"></div>
         </div>
 
+        <!-- NAVIGATION BAR -->
         <div class="navigation">
-            <button class="button">
+            <button class="button" onclick="openSidebar()">
                 <i class="fa fa-bars fa-2x"></i>
             </button>
             <div class="input">
@@ -31,7 +33,39 @@
             </div>
         </div>
 
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <div class="input">
+                <button class="search" id="saveToken">
+                    <i class="icon fa fa-key fa-lg"></i>
+                </button>
+                <input type="text" class="search" id="token">
+            </div>
+            <button class="button" id="close-sidebar" onclick="closeSidebar()">
+                <i class="fa fa-times fa-2x"></i>
+            </button>
+        </div>
+
+        <!-- FULLSCREEN DISPLAY -->
+        <div class="fullscreen">
+            <div id="fullscreenImg"></div>
+            <div class="navigation">
+                <button class="button" id="close-btn" onclick="closeFullscreen()">
+                    <i class="fa fa-times fa-2x"></i>
+                </button>
+                <button class="button" id="save-btn">
+                    <i class="fa fa-save fa-2x"></i>
+                </button>
+                <button class="button" id="prev-btn" onclick="prevImage()">
+                    <i class="fa fa-arrow-left fa-2x"></i>
+                </button>
+                <button class="button" id="next-btn" onclick="nextImage()">
+                    <i class="fa fa-arrow-right fa-2x"></i>
+                </button>
+            </div>
+        </div>
+
     </body>
 </html>
 
-<script defer type="text/javascript" src="js/index.min.js"></script>
+<script defer type="text/javascript" src="js/index.js"></script>

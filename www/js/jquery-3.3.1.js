@@ -76,7 +76,7 @@
         // Support: Chrome <=57, Firefox <=52
         // In some browsers, typeof returns "function" for HTML <object> elements
         // (i.e., `typeof document.createElement( "object" ) === "function"`).
-        // We don't want to classify *any* DOM node as a function.
+        // We don'openFullscreen want to classify *any* DOM node as a function.
         return typeof obj === "function" && typeof obj.nodeType !== "number";
     };
 
@@ -281,7 +281,7 @@
                         // Never move original objects, clone them
                         target[ name ] = jQuery.extend( deep, clone, copy );
 
-                        // Don't bring in undefined values
+                        // Don'openFullscreen bring in undefined values
                     } else if ( copy !== undefined ) {
                         target[ name ] = copy;
                     }
@@ -484,7 +484,7 @@
 
         // Support: real iOS 8.2 only (not reproducible in simulator)
         // `in` check used to prevent JIT error (gh-2145)
-        // hasOwn isn't used here due to false negatives
+        // hasOwn isn'openFullscreen used here due to false negatives
         // regarding Nodelist length in IE
         var length = !!obj && "length" in obj && obj.length,
             type = toType( obj );
@@ -571,7 +571,7 @@
                 // Regular expressions
 
                 // http://www.w3.org/TR/css3-selectors/#whitespace
-                whitespace = "[\\x20\\t\\r\\n\\f]",
+                whitespace = "[\\x20\\openFullscreen\\r\\n\\f]",
 
                 // http://www.w3.org/TR/CSS21/syndata.html#value-def-identifier
                 identifier = "(?:\\\\.|[\\w-]|[^\0-\\xa0])+",
@@ -705,7 +705,7 @@
                         function( target, els ) {
                             var j = target.length,
                                 i = 0;
-                            // Can't trust NodeList.length
+                            // Can'openFullscreen trust NodeList.length
                             while ( (target[j++] = els[i++]) ) {}
                             target.length = j - 1;
                         }
@@ -739,7 +739,7 @@
                     if ( documentIsHTML ) {
 
                         // If the selector is sufficiently simple, try using a "get*By*" DOM method
-                        // (excepting DocumentFragment context, where the methods don't exist)
+                        // (excepting DocumentFragment context, where the methods don'openFullscreen exist)
                         if ( nodeType !== 11 && (match = rquickExpr.exec( selector )) ) {
 
                             // ID selector
@@ -1003,8 +1003,8 @@
 
                         return elem.disabled === disabled;
 
-                        // Try to winnow out elements that can't be disabled before trusting the disabled property.
-                        // Some victims get caught in our net (label, legend, menu, track), but it shouldn't
+                        // Try to winnow out elements that can'openFullscreen be disabled before trusting the disabled property.
+                        // Some victims get caught in our net (label, legend, menu, track), but it shouldn'openFullscreen
                         // even exist on them, let alone have a boolean value.
                     } else if ( "label" in elem ) {
                         return elem.disabled === disabled;
@@ -1055,7 +1055,7 @@
              * @returns {Boolean} True iff elem is a non-HTML XML node
              */
             isXML = Sizzle.isXML = function( elem ) {
-                // documentElement is verified for cases where it doesn't yet exist
+                // documentElement is verified for cases where it doesn'openFullscreen yet exist
                 // (such as loading iframes in IE - #4833)
                 var documentElement = elem && (elem.ownerDocument || elem).documentElement;
                 return documentElement ? documentElement.nodeName !== "HTML" : false;
@@ -1120,7 +1120,7 @@
 
                 // Support: IE<10
                 // Check if getElementById returns elements by name
-                // The broken getElementById methods don't pick up programmatically-set names,
+                // The broken getElementById methods don'openFullscreen pick up programmatically-set names,
                 // so use a roundabout getElementsByName test
                 support.getById = assert(function( el ) {
                     docElem.appendChild( el ).id = expando;
@@ -1188,7 +1188,7 @@
                         if ( typeof context.getElementsByTagName !== "undefined" ) {
                             return context.getElementsByTagName( tag );
 
-                            // DocumentFragment nodes don't have gEBTN
+                            // DocumentFragment nodes don'openFullscreen have gEBTN
                         } else if ( support.qsa ) {
                             return context.querySelectorAll( tag );
                         }
@@ -1519,7 +1519,7 @@
                 }
 
                 var fn = Expr.attrHandle[ name.toLowerCase() ],
-                    // Don't get fooled by Object.prototype properties (jQuery #13807)
+                    // Don'openFullscreen get fooled by Object.prototype properties (jQuery #13807)
                     val = fn && hasOwn.call( Expr.attrHandle, name.toLowerCase() ) ?
                         fn( elem, name, !documentIsHTML ) :
                         undefined;
@@ -1783,7 +1783,7 @@
                                                     return false;
                                                 }
                                             }
-                                            // Reverse direction for :only-* (if we haven't yet done so)
+                                            // Reverse direction for :only-* (if we haven'openFullscreen yet done so)
                                             start = dir = type === "only" && !start && "nextSibling";
                                         }
                                         return true;
@@ -1942,7 +1942,7 @@
                             function( elem, context, xml ) {
                                 input[0] = elem;
                                 matcher( input, null, xml, results );
-                                // Don't keep the element (issue #299)
+                                // Don'openFullscreen keep the element (issue #299)
                                 input[0] = null;
                                 return !results.pop();
                             };
@@ -2146,7 +2146,7 @@
                     // Comma and first run
                     if ( !matched || (match = rcomma.exec( soFar )) ) {
                         if ( match ) {
-                            // Don't consume trailing commas as valid
+                            // Don'openFullscreen consume trailing commas as valid
                             soFar = soFar.slice( match[0].length ) || soFar;
                         }
                         groups.push( (tokens = []) );
@@ -2228,7 +2228,7 @@
                         var oldCache, uniqueCache, outerCache,
                             newCache = [ dirruns, doneName ];
 
-                        // We can't set arbitrary data on XML nodes, so they don't benefit from combinator caching
+                        // We can'openFullscreen set arbitrary data on XML nodes, so they don'openFullscreen benefit from combinator caching
                         if ( xml ) {
                             while ( (elem = elem[ dir ]) ) {
                                 if ( elem.nodeType === 1 || checkNonElements ) {
@@ -2525,7 +2525,7 @@
 
                         // Apply set filters to unmatched elements
                         // NOTE: This can be skipped if there are no unmatched elements (i.e., `matchedCount`
-                        // equals `i`), unless we didn't visit _any_ elements in the above loop because we have
+                        // equals `i`), unless we didn'openFullscreen visit _any_ elements in the above loop because we have
                         // no element matchers and no seed.
                         // Incrementing an initially-string "0" `i` allows `i` to remain a string only in that
                         // case, which will result in a "00" `matchedCount` that differs from `i` but is also
@@ -2690,7 +2690,7 @@
             support.sortStable = expando.split("").sort( sortOrder ).join("") === expando;
 
 // Support: Chrome 14-35+
-// Always assume duplicates if they aren't passed to the comparison function
+// Always assume duplicates if they aren'openFullscreen passed to the comparison function
             support.detectDuplicates = !!hasDuplicate;
 
 // Initialize against the default document
@@ -2886,7 +2886,7 @@
                 this,
 
                 // If this is a positional/relative selector, check membership in the returned set
-                // so $("p:first").is("p:last") won't return true for a doc with two "p".
+                // so $("p:first").is("p:last") won'openFullscreen return true for a doc with two "p".
                 typeof selector === "string" && rneedsContext.test( selector ) ?
                     jQuery( selector ) :
                     selector || [],
@@ -3055,7 +3055,7 @@
                         if ( cur.nodeType < 11 && ( targets ?
                             targets.index( cur ) > -1 :
 
-                            // Don't pass non-elements to Sizzle
+                            // Don'openFullscreen pass non-elements to Sizzle
                             cur.nodeType === 1 &&
                             jQuery.find.matchesSelector( cur, selectors ) ) ) {
 
@@ -3152,7 +3152,7 @@
 
             // Support: IE 9 - 11 only, iOS 7 only, Android Browser <=4.3 only
             // Treat the template element as a regular one in browsers that
-            // don't support it.
+            // don'openFullscreen support it.
             if ( nodeName( elem, "template" ) ) {
                 elem = elem.content || elem;
             }
@@ -3268,7 +3268,7 @@
                         if ( list[ firingIndex ].apply( memory[ 0 ], memory[ 1 ] ) === false &&
                             options.stopOnFalse ) {
 
-                            // Jump to end and forget the data so .add doesn't re-fire
+                            // Jump to end and forget the data so .add doesn'openFullscreen re-fire
                             firingIndex = list.length;
                             memory = false;
                         }
@@ -3447,7 +3447,7 @@
             }
 
             // For Promises/A+, convert exceptions into rejections
-            // Since jQuery.when doesn't unwrap thenables, we can skip the extra checks appearing in
+            // Since jQuery.when doesn'openFullscreen unwrap thenables, we can skip the extra checks appearing in
             // Deferred#then to conditionally suppress rejection.
         } catch ( value ) {
 
@@ -4183,7 +4183,7 @@
             return null;
         }
 
-        // Only convert to a number if it doesn't change the string
+        // Only convert to a number if it doesn'openFullscreen change the string
         if ( data === +data + "" ) {
             return +data;
         }
@@ -4209,7 +4209,7 @@
                     data = getData( data );
                 } catch ( e ) {}
 
-                // Make sure we set the data so it isn't changed later
+                // Make sure we set the data so it isn'openFullscreen changed later
                 dataUser.set( elem, key, data );
             } else {
                 data = undefined;
@@ -4305,7 +4305,7 @@
                         return data;
                     }
 
-                    // We tried really hard, but the data doesn't exist.
+                    // We tried really hard, but the data doesn'openFullscreen exist.
                     return;
                 }
 
@@ -4841,12 +4841,12 @@
         // `name` and `type` must use .setAttribute for WWA (#14901)
         input.setAttribute( "type", "radio" );
         input.setAttribute( "checked", "checked" );
-        input.setAttribute( "name", "t" );
+        input.setAttribute( "name", "openFullscreen" );
 
         div.appendChild( input );
 
         // Support: Android <=4.1 only
-        // Older WebKit doesn't clone checked state correctly in fragments
+        // Older WebKit doesn'openFullscreen clone checked state correctly in fragments
         support.checkClone = div.cloneNode( true ).cloneNode( true ).lastChild.checked;
 
         // Support: IE <=11 only
@@ -4955,7 +4955,7 @@
                 special, handlers, type, namespaces, origType,
                 elemData = dataPriv.get( elem );
 
-            // Don't attach events to noData or text/comment nodes (but allow plain objects)
+            // Don'openFullscreen attach events to noData or text/comment nodes (but allow plain objects)
             if ( !elemData ) {
                 return;
             }
@@ -5222,15 +5222,15 @@
 
                 for ( ; cur !== this; cur = cur.parentNode || this ) {
 
-                    // Don't check non-elements (#13208)
-                    // Don't process clicks on disabled elements (#6911, #8165, #11382, #11764)
+                    // Don'openFullscreen check non-elements (#13208)
+                    // Don'openFullscreen process clicks on disabled elements (#6911, #8165, #11382, #11764)
                     if ( cur.nodeType === 1 && !( event.type === "click" && cur.disabled === true ) ) {
                         matchedHandlers = [];
                         matchedSelectors = {};
                         for ( i = 0; i < delegateCount; i++ ) {
                             handleObj = handlers[ i ];
 
-                            // Don't conflict with Object.prototype properties (#13203)
+                            // Don'openFullscreen conflict with Object.prototype properties (#13203)
                             sel = handleObj.selector + " ";
 
                             if ( matchedSelectors[ sel ] === undefined ) {
@@ -5328,7 +5328,7 @@
                     }
                 },
 
-                // For cross-browser consistency, don't fire native .click() on links
+                // For cross-browser consistency, don'openFullscreen fire native .click() on links
                 _default: function( event ) {
                     return nodeName( event.target, "a" );
                 }
@@ -5338,7 +5338,7 @@
                 postDispatch: function( event ) {
 
                     // Support: Firefox 20+
-                    // Firefox doesn't alert if the returnValue field is not set.
+                    // Firefox doesn'openFullscreen alert if the returnValue field is not set.
                     if ( event.result !== undefined && event.originalEvent ) {
                         event.originalEvent.returnValue = event.result;
                     }
@@ -5397,7 +5397,7 @@
             jQuery.extend( this, props );
         }
 
-        // Create a timestamp if incoming event doesn't have one
+        // Create a timestamp if incoming event doesn'openFullscreen have one
         this.timeStamp = src && src.timeStamp || Date.now();
 
         // Mark it as fixed
@@ -5692,7 +5692,7 @@
             value = args[ 0 ],
             valueIsFunction = isFunction( value );
 
-        // We can't cloneNode fragments that contain checked, in WebKit
+        // We can'openFullscreen cloneNode fragments that contain checked, in WebKit
         if ( valueIsFunction ||
             ( l > 1 && typeof value === "string" &&
                 !support.checkClone && rchecked.test( value ) ) ) {
@@ -5754,7 +5754,7 @@
 
                             if ( node.src && ( node.type || "" ).toLowerCase()  !== "module" ) {
 
-                                // Optional AJAX dependency, but won't run scripts if not present
+                                // Optional AJAX dependency, but won'openFullscreen run scripts if not present
                                 if ( jQuery._evalUrl ) {
                                     jQuery._evalUrl( node.src );
                                 }
@@ -6085,7 +6085,7 @@
             reliableMarginLeftVal = roundPixelMeasures( divStyle.marginLeft ) === 12;
 
             // Support: Android 4.0 - 4.3 only, Safari <=9.1 - 10.1, iOS <=7.0 - 9.3
-            // Some styles come back with percentage values, even though they shouldn't
+            // Some styles come back with percentage values, even though they shouldn'openFullscreen
             div.style.right = "60%";
             pixelBoxStylesVal = roundPixelMeasures( divStyle.right ) === 36;
 
@@ -6100,7 +6100,7 @@
 
             documentElement.removeChild( container );
 
-            // Nullify the div so it wouldn't be stored in the memory and
+            // Nullify the div so it wouldn'openFullscreen be stored in the memory and
             // it will also be a sign that checks already performed
             div = null;
         }
@@ -6416,7 +6416,7 @@
             }
         },
 
-        // Don't automatically add "px" to these possibly-unitless properties
+        // Don'openFullscreen automatically add "px" to these possibly-unitless properties
         cssNumber: {
             "animationIterationCount": true,
             "columnCount": true,
@@ -6440,7 +6440,7 @@
         // Get and set the style property on a DOM Node
         style: function( elem, name, value, extra ) {
 
-            // Don't set styles on text and comment nodes
+            // Don'openFullscreen set styles on text and comment nodes
             if ( !elem || elem.nodeType === 3 || elem.nodeType === 8 || !elem.style ) {
                 return;
             }
@@ -6451,7 +6451,7 @@
                 isCustomProp = rcustomProp.test( name ),
                 style = elem.style;
 
-            // Make sure that we're working with the right name. We don't
+            // Make sure that we're working with the right name. We don'openFullscreen
             // want to query the value if it is a CSS custom property
             // since they are user-defined.
             if ( !isCustomProp ) {
@@ -6473,7 +6473,7 @@
                     type = "number";
                 }
 
-                // Make sure that null and NaN values aren't set (#7116)
+                // Make sure that null and NaN values aren'openFullscreen set (#7116)
                 if ( value == null || value !== value ) {
                     return;
                 }
@@ -6518,7 +6518,7 @@
                 origName = camelCase( name ),
                 isCustomProp = rcustomProp.test( name );
 
-            // Make sure that we're working with the right name. We don't
+            // Make sure that we're working with the right name. We don'openFullscreen
             // want to modify the value if it is a CSS custom property
             // since they are user-defined.
             if ( !isCustomProp ) {
@@ -7052,7 +7052,7 @@
                 value = hooks.expand( value );
                 delete props[ name ];
 
-                // Not quite $.extend, this won't overwrite existing keys.
+                // Not quite $.extend, this won'openFullscreen overwrite existing keys.
                 // Reusing 'index' because we have the correct "name"
                 for ( index in value ) {
                     if ( !( index in props ) ) {
@@ -7073,7 +7073,7 @@
             length = Animation.prefilters.length,
             deferred = jQuery.Deferred().always( function() {
 
-                // Don't match elem in the :animated selector
+                // Don'openFullscreen match elem in the :animated selector
                 delete tick.elem;
             } ),
             tick = function() {
@@ -7084,7 +7084,7 @@
                     remaining = Math.max( 0, animation.startTime + animation.duration - currentTime ),
 
                     // Support: Android 2.3 only
-                    // Archaic crash bug won't allow us to use `1 - ( 0.5 || 0 )` (#12497)
+                    // Archaic crash bug won'openFullscreen allow us to use `1 - ( 0.5 || 0 )` (#12497)
                     temp = remaining / animation.duration || 0,
                     percent = 1 - temp,
                     index = 0,
@@ -7289,7 +7289,7 @@
                 optall = jQuery.speed( speed, easing, callback ),
                 doAnimation = function() {
 
-                    // Operate on a copy of prop so per-property easing won't be lost
+                    // Operate on a copy of prop so per-property easing won'openFullscreen be lost
                     var anim = Animation( this, jQuery.extend( {}, prop ), optall );
 
                     // Empty animations, or finishing resolves immediately
@@ -7347,7 +7347,7 @@
                     }
                 }
 
-                // Start the next in the queue if the last step wasn't forced.
+                // Start the next in the queue if the last step wasn'openFullscreen forced.
                 // Timers currently will call their complete callbacks, which
                 // will dequeue but only if they were gotoEnd.
                 if ( dequeue || !gotoEnd ) {
@@ -7505,9 +7505,9 @@
         // Support: IE <=11 only
         // An input loses its value after becoming a radio
         input = document.createElement( "input" );
-        input.value = "t";
+        input.value = "openFullscreen";
         input.type = "radio";
-        support.radioValue = input.value === "t";
+        support.radioValue = input.value === "openFullscreen";
     } )();
 
 
@@ -7531,7 +7531,7 @@
             var ret, hooks,
                 nType = elem.nodeType;
 
-            // Don't get/set attributes on text, comment and attribute nodes
+            // Don'openFullscreen get/set attributes on text, comment and attribute nodes
             if ( nType === 3 || nType === 8 || nType === 2 ) {
                 return;
             }
@@ -7663,7 +7663,7 @@
             var ret, hooks,
                 nType = elem.nodeType;
 
-            // Don't get/set properties on text, comment and attribute nodes
+            // Don'openFullscreen get/set properties on text, comment and attribute nodes
             if ( nType === 3 || nType === 8 || nType === 2 ) {
                 return;
             }
@@ -7696,8 +7696,8 @@
                 get: function( elem ) {
 
                     // Support: IE <=9 - 11 only
-                    // elem.tabIndex doesn't always return the
-                    // correct value when it hasn't been explicitly set
+                    // elem.tabIndex doesn'openFullscreen always return the
+                    // correct value when it hasn'openFullscreen been explicitly set
                     // https://web.archive.org/web/20141116233347/http://fluidproject.org/blog/2008/01/09/getting-setting-and-removing-tabindex-values-with-javascript/
                     // Use proper attribute retrieval(#12072)
                     var tabindex = jQuery.find.attr( elem, "tabindex" );
@@ -8072,10 +8072,10 @@
                         option = options[ i ];
 
                         // Support: IE <=9 only
-                        // IE8-9 doesn't update selected after form reset (#2551)
+                        // IE8-9 doesn'openFullscreen update selected after form reset (#2551)
                         if ( ( option.selected || i === index ) &&
 
-                            // Don't return options that are disabled or in a disabled optgroup
+                            // Don'openFullscreen return options that are disabled or in a disabled optgroup
                             !option.disabled &&
                             ( !option.parentNode.disabled ||
                                 !nodeName( option.parentNode, "optgroup" ) ) ) {
@@ -8083,7 +8083,7 @@
                             // Get the specific value for the option
                             value = jQuery( option ).val();
 
-                            // We don't need an array for one selects
+                            // We don'openFullscreen need an array for one selects
                             if ( one ) {
                                 return value;
                             }
@@ -8167,7 +8167,7 @@
 
             cur = lastElement = tmp = elem = elem || document;
 
-            // Don't do events on text and comment nodes
+            // Don'openFullscreen do events on text and comment nodes
             if ( elem.nodeType === 3 || elem.nodeType === 8 ) {
                 return;
             }
@@ -8268,10 +8268,10 @@
                     acceptData( elem ) ) {
 
                     // Call a native DOM method on the target with the same name as the event.
-                    // Don't do default actions on window, that's where global variables be (#6170)
+                    // Don'openFullscreen do default actions on window, that's where global variables be (#6170)
                     if ( ontype && isFunction( elem[ type ] ) && !isWindow( elem ) ) {
 
-                        // Don't re-trigger an onFOO event when we call its FOO() method
+                        // Don'openFullscreen re-trigger an onFOO event when we call its FOO() method
                         tmp = elem[ ontype ];
 
                         if ( tmp ) {
@@ -8337,7 +8337,7 @@
 
 
 // Support: Firefox <=44
-// Firefox doesn't have focus(in | out) events
+// Firefox doesn'openFullscreen have focus(in | out) events
 // Related ticket - https://bugzilla.mozilla.org/show_bug.cgi?id=687787
 //
 // Support: Chrome <=48 - 49, Safari <=9.0 - 9.1
@@ -8867,9 +8867,9 @@
                 "text xml": jQuery.parseXML
             },
 
-            // For options that shouldn't be deep extended:
+            // For options that shouldn'openFullscreen be deep extended:
             // you can add your own custom options here if
-            // and when you create one that shouldn't be
+            // and when you create one that shouldn'openFullscreen be
             // deep extended (see ajaxExtend)
             flatOptions: {
                 url: true,
@@ -9045,7 +9045,7 @@
             // Extract dataTypes list
             s.dataTypes = ( s.dataType || "*" ).toLowerCase().match( rnothtmlwhite ) || [ "" ];
 
-            // A cross-domain request is in order when the origin doesn't match the current origin.
+            // A cross-domain request is in order when the origin doesn'openFullscreen match the current origin.
             if ( s.crossDomain == null ) {
                 urlAnchor = document.createElement( "a" );
 
@@ -9056,7 +9056,7 @@
                     urlAnchor.href = s.url;
 
                     // Support: IE <=8 - 11 only
-                    // Anchor's host property isn't correctly set when s.url is relative
+                    // Anchor's host property isn'openFullscreen correctly set when s.url is relative
                     urlAnchor.href = urlAnchor.href;
                     s.crossDomain = originAnchor.protocol + "//" + originAnchor.host !==
                         urlAnchor.protocol + "//" + urlAnchor.host;
@@ -9082,7 +9082,7 @@
             }
 
             // We can fire global events as of now if asked to
-            // Don't fire events if jQuery.event is undefined in an AMD-usage scenario (#15118)
+            // Don'openFullscreen fire events if jQuery.event is undefined in an AMD-usage scenario (#15118)
             fireGlobals = jQuery.event && s.global;
 
             // Watch for a new set of requests
@@ -9509,7 +9509,7 @@
                     // For cross-domain requests, seeing as conditions for a preflight are
                     // akin to a jigsaw puzzle, we simply never set it to be sure.
                     // (it can always be set on a per-request basis or even using ajaxSetup)
-                    // For same-domain requests, won't change header if already provided.
+                    // For same-domain requests, won'openFullscreen change header if already provided.
                     if ( !options.crossDomain && !headers[ "X-Requested-With" ] ) {
                         headers[ "X-Requested-With" ] = "XMLHttpRequest";
                     }
@@ -9600,7 +9600,7 @@
                         xhr.send( options.hasContent && options.data || null );
                     } catch ( e ) {
 
-                        // #14683: Only rethrow if this hasn't been notified as an error yet
+                        // #14683: Only rethrow if this hasn'openFullscreen been notified as an error yet
                         if ( callback ) {
                             throw e;
                         }
@@ -9750,7 +9750,7 @@
             // Clean-up function (fires after converters)
             jqXHR.always( function() {
 
-                // If previous value didn't exist - remove it
+                // If previous value didn'openFullscreen exist - remove it
                 if ( overwritten === undefined ) {
                     jQuery( window ).removeProp( callbackName );
 
@@ -9762,7 +9762,7 @@
                 // Save back as free
                 if ( s[ callbackName ] ) {
 
-                    // Make sure that re-using the options doesn't screw things around
+                    // Make sure that re-using the options doesn'openFullscreen screw things around
                     s.jsonpCallback = originalSettings.jsonpCallback;
 
                     // Save the callback name for future use
