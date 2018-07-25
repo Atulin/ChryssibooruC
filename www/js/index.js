@@ -32,15 +32,31 @@ var app = {
 
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
         console.log('Received Event: ' + id);
     }
 };
 
 app.initialize();
+
+
+
+var url = "https://derpibooru.org/search.json?q=";
+var tags;
+
+$("#search").click(function(){
+    tags = $("#searchbar").val();
+    tags = tags.replace(/ /g, "+").replace(/,/g, "%2C");
+    var query = url + tags;
+
+    $.ajax({
+        url: query,
+        success: handleResult
+    });
+
+    function handleResult(result){
+        var i;
+        for (i = 0; i < result.search.length; i++) {
+            $(".content").append("<div class='image-container'><img class='image' src='https:" + result.search[i].representations.thumb + "'></div>")
+        }
+    }
+});
